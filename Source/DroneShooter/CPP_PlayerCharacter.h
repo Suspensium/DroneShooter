@@ -40,8 +40,10 @@ class ACPP_PlayerCharacter : public ACharacter, public ICombatable
 	// Offset to spawn projectiles
 	FVector MuzzleOffset{ 100.f, 0.f, 0.f };
 	// Player mechanics parameters
+	UPROPERTY(EditAnywhere, meta = (AllowProvateAccess = true))
 	unsigned int Ammo{ 10 };
 	bool bCanShoot{ true };
+	UPROPERTY(EditAnywhere, meta = (AllowProvateAccess = true))
 	float DelayBetweenShots{ 0.3f };
 #pragma endregion Parameters
 

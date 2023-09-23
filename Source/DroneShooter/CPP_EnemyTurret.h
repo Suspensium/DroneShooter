@@ -44,11 +44,15 @@ private:
 	// Offset to spawn projectiles
 	FVector MuzzleOffset{ 100.f, 0.f, 0.f };
 	bool bCanShoot{ true };
+	UPROPERTY(EditAnywhere, meta = (AllowProvateAccess = true))
 	float DelayBetweenShots{ 1.f };
+	UPROPERTY(EditAnywhere, meta = (AllowProvateAccess = true))
 	float FireRadius{ 1500.f };
 	bool bTargetInRange{ false };
+	UPROPERTY(EditAnywhere, meta = (AllowProvateAccess = true))
 	float AngleTolerance{ 1.f };
 	unsigned int TurretBurst{};
+	UPROPERTY(EditAnywhere, meta = (AllowProvateAccess = true))
 	unsigned int BurtsShotsCount{ 5 };
 #pragma endregion Parameters
 

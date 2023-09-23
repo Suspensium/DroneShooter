@@ -13,8 +13,6 @@ class UCombatable : public UInterface
 
 class UWorld;
 class ACPP_Projectile;
-class ACPP_Turret;
-class ACPP_PlayerCharacter;
 
 class DRONESHOOTER_API ICombatable
 {
@@ -28,9 +26,8 @@ public:
 	float GetHealth() { return Health; }
 	float GetMaxHealth() { return MaxHealth; }
 
-	// Static polymorphed method for different kind of instigators
 	virtual void Shoot(UWorld* const World, const FRotator& SpawnRotation, const FVector& SpawnLocation, TSubclassOf<ACPP_Projectile>& ProjectileSubclass);
-	
+
 	virtual void TakeOnHitDamage(float Damage);
-	virtual void Die() {};
+	virtual void Die() = 0;
 };
